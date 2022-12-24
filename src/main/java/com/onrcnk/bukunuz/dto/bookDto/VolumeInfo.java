@@ -5,18 +5,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class VolumeInfo {
     private String title;
-    private String authors;
-    private String publisher;
+    private List<String> authors;
     private String publishedDate;
     private String description;
     private int pageCount;
-    private String categories;
+    private List<String> categories;
     private String language;
     private ImageLinks imageLinks;
 

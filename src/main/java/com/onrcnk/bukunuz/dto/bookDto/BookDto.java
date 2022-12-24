@@ -14,6 +14,4 @@ import java.util.List;
 public class BookDto {
     private List<Item> items;
 
-
-
 }
