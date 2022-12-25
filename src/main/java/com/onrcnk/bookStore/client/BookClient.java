@@ -1,6 +1,6 @@
-package com.onrcnk.bukunuz.client;
+package com.onrcnk.bookStore.client;
 
-import com.onrcnk.bukunuz.dto.bookDto.BookDto;
+import com.onrcnk.bookStore.dto.bookDto.BookDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

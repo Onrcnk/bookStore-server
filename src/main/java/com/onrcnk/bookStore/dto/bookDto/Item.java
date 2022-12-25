@@ -1,4 +1,4 @@
-package com.onrcnk.bukunuz.dto.bookDto;
+package com.onrcnk.bookStore.dto.bookDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.onrcnk.bukunuz.dto.bookDto;
+package com.onrcnk.bookStore.dto.bookDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SaleInfo {
+public class ListPrice {
 
-    private ListPrice listPrice;
+    private double amount;
+    private String currencyCode;
 }

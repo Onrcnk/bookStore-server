@@ -1,4 +1,4 @@
-package com.onrcnk.bukunuz;
+package com.onrcnk.bookStore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-public class BukunuzApplication {
+public class BookStoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BukunuzApplication.class, args);
+		SpringApplication.run(BookStoreApplication.class, args);
 	}
 
 }

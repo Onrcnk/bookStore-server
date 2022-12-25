@@ -1,4 +1,4 @@
-package com.onrcnk.bukunuz.domain;
+package com.onrcnk.bookStore.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

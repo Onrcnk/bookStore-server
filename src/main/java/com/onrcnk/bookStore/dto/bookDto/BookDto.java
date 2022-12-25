@@ -1,16 +1,17 @@
-package com.onrcnk.bukunuz.dto.bookDto;
+package com.onrcnk.bookStore.dto.bookDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ListPrice {
+public class BookDto {
+    private List<Item> items;
 
-    private double amount;
-    private String currencyCode;
 }

@@ -1,4 +1,4 @@
-package com.onrcnk.bukunuz.domain;
+package com.onrcnk.bookStore.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,17 +15,14 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Genre {
+public class Catalogue {
 
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     @Column(updatable = false, nullable = false)
-    private String genreId;
+    private String catalogueId;
 
-    @ManyToOne
-    private Catalogue catalogue;
-
-    @ManyToMany
-    private Set<Book> bookSet = new HashSet<>();
+    @OneToMany
+    private Set<Genre> genreSet = new HashSet<>();
 }

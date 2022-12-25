@@ -1,6 +1,6 @@
-package com.onrcnk.bukunuz.repository;
+package com.onrcnk.bookStore.repository;
 
-import com.onrcnk.bukunuz.domain.Catalogue;
+import com.onrcnk.bookStore.domain.Catalogue;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

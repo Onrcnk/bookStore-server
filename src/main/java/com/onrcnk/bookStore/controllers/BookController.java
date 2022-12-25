@@ -1,8 +1,8 @@
-package com.onrcnk.bukunuz.controllers;
+package com.onrcnk.bookStore.controllers;
 
-import com.onrcnk.bukunuz.client.BookClient;
-import com.onrcnk.bukunuz.dto.bookDto.BookDto;
-import com.onrcnk.bukunuz.services.BookService;
+import com.onrcnk.bookStore.client.BookClient;
+import com.onrcnk.bookStore.dto.bookDto.BookDto;
+import com.onrcnk.bookStore.services.BookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

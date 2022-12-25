@@ -1,6 +1,6 @@
-package com.onrcnk.bukunuz.services.Imp;
+package com.onrcnk.bookStore.services.Imp;
 
-import com.onrcnk.bukunuz.services.BookService;
+import com.onrcnk.bookStore.services.BookService;
 import org.springframework.stereotype.Service;
 
 @Service
