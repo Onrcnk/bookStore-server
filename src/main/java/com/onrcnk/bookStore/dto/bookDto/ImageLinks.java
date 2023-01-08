@@ -12,5 +12,4 @@ import lombok.Setter;
 public class ImageLinks {
 
     private String smallThumbnail;
-    private String thumbnail;
 }

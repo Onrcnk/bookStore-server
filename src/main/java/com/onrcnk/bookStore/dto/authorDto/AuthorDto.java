@@ -1,5 +1,7 @@
-package com.onrcnk.bookStore.dto.bookDto;
+package com.onrcnk.bookStore.dto.authorDto;
 
+import com.onrcnk.bookStore.domain.Author;
+import com.onrcnk.bookStore.domain.Category;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +13,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookDto {
-    private List<Item> items;
+public class AuthorDto {
 
+    private String authorName;
 }

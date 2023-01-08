@@ -16,7 +16,7 @@ public class VolumeInfo {
     private List<String> authors;
     private String publishedDate;
     private String description;
-    private int pageCount;
+    private Integer pageCount;
     private List<String> categories;
     private String language;
     private ImageLinks imageLinks;

@@ -1,25 +1,29 @@
 package com.onrcnk.bookStore.controllers;
 
 import com.onrcnk.bookStore.client.BookClient;
-import com.onrcnk.bookStore.dto.bookDto.BookDto;
+import com.onrcnk.bookStore.domain.Book;
+import com.onrcnk.bookStore.dto.bookDto.GetBookDto;
+import com.onrcnk.bookStore.dto.saveBookDto.SaveBookDto;
 import com.onrcnk.bookStore.services.BookService;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Slf4j
-@Controller
+@RestController
 @CrossOrigin
 public class BookController {
 
     private final BookService bookService;
     private final BookClient bookClient;
     private final String key= "AIzaSyBeNAOTotjs0GcDb_-gtzZVzBHoTZtzavY";
-
 
     public BookController(BookService bookService, BookClient bookClient) {
         this.bookService = bookService;
@@ -28,10 +32,14 @@ public class BookController {
 
     @RequestMapping("/books")
     public ResponseEntity<?> getBook(@RequestParam String query){
-        BookDto book = bookClient.getBooks(query, key);
-
-        book.getItems().stream()
-                .forEach(item -> System.out.println(item.getId()));
+        GetBookDto book = bookClient.getBooks(query, key);
         return new ResponseEntity<>(book, HttpStatus.OK);
     }
+
+    @PostMapping("/book")
+    public ResponseEntity<?> addBook(@RequestBody @Valid SaveBookDto saveBookDto){
+        bookService.saveBook(saveBookDto);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }

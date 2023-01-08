@@ -1,13 +1,14 @@
 package com.onrcnk.bookStore.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.onrcnk.bookStore.dto.bookDto.ImageLinks;
+import com.onrcnk.bookStore.dto.bookDto.ListPrice;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -15,6 +16,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 public class Book {
 
     @Id
@@ -23,6 +25,37 @@ public class Book {
     @Column(updatable = false, nullable = false)
     private String bookId;
 
+    private String title;
+
     @ManyToMany
-    private Set<Genre> genreSet = new HashSet<>();
+    @JoinTable(
+            name = "Book_Category",
+            joinColumns = { @JoinColumn(name = "book_id") },
+            inverseJoinColumns = { @JoinColumn(name = "category_id") }
+    )
+    private Set<Category> categories = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "Book_Author",
+            joinColumns = { @JoinColumn(name = "book_id") },
+            inverseJoinColumns = { @JoinColumn(name = "author_id") }
+    )
+    private List<Author> authors;
+
+    private String publishedDate;
+
+    private String description;
+
+    private Integer pageCount;
+
+    private String language;
+
+    private String smallThumbnail;
+
+    private BigDecimal price;
+
+    private String currencyCode;
+
+    private Integer stockAmount;
 }

@@ -7,25 +7,20 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Genre {
+public class Author {
 
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     @Column(updatable = false, nullable = false)
-    private String genreId;
+    private String authorId;
 
-    @ManyToOne
-    private Catalogue catalogue;
 
-    @ManyToMany
-    private Set<Book> bookSet = new HashSet<>();
+    private String authorName;
 }

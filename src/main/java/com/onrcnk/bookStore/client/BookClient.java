@@ -1,6 +1,6 @@
 package com.onrcnk.bookStore.client;
 
-import com.onrcnk.bookStore.dto.bookDto.BookDto;
+import com.onrcnk.bookStore.dto.bookDto.GetBookDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface BookClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
-    BookDto getBooks(@RequestParam String q, @RequestParam String key);
+    GetBookDto getBooks(@RequestParam String q, @RequestParam String key);
 
 }
