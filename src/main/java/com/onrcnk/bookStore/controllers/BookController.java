@@ -1,17 +1,12 @@
 package com.onrcnk.bookStore.controllers;
 
 import com.onrcnk.bookStore.client.BookClient;
-import com.onrcnk.bookStore.domain.Book;
 import com.onrcnk.bookStore.dto.bookDto.GetBookDto;
 import com.onrcnk.bookStore.dto.saveBookDto.SaveBookDto;
 import com.onrcnk.bookStore.services.BookService;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
