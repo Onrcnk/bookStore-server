@@ -33,7 +33,7 @@ public class Book {
             joinColumns = { @JoinColumn(name = "book_id") },
             inverseJoinColumns = { @JoinColumn(name = "category_id") }
     )
-    private Set<Category> categories = new HashSet<>();
+    private List<Category> categories;
 
     @ManyToMany
     @JoinTable(

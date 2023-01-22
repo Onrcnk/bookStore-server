@@ -32,7 +32,7 @@ public class BookController {
     }
 
     @PostMapping("/book")
-    public ResponseEntity<?> addBook(@RequestBody @Valid SaveBookDto saveBookDto){
+    public ResponseEntity<?> addBook(@RequestBody SaveBookDto saveBookDto){
         bookService.saveBook(saveBookDto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
